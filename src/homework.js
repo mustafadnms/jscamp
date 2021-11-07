@@ -6,20 +6,26 @@ function findPrime(...numbers) {
             result.push("Asal : " + number)
         }else{
             result.push("Asal Değil: " + number)
+            
         }
     });
     return result
 }
 
 function primeNumber(number) {
-    for (let i = 2; i < number; i++) {
+    if(number < 2){
+        return false
+    }else{
+        for (let i = 2; i < number; i++) {
             if (number % i == 0) {
                 return false
             }
         }
-    return true
+        return true
+    }
+
 }
-console.log(findPrime(1,2,24,25,29))
+console.log(findPrime(1,12,2,24,25,29))
 
 ////////////////////////////////////
 
@@ -47,7 +53,7 @@ function friendNumber(number1, number2) {
 }
 friendNumber(220,284)
 
-////////////////////////////////////
+//////////////////////////////////////
 
 function perfectNumber() {
     for (let i = 1; i < 1000; i++) {
@@ -65,7 +71,7 @@ function perfectNumber() {
 }
 perfectNumber()
 
-/////////////////////////////////////
+///////////////////////////////////////
 
 function primeNumber2() {
     for (let i = 2; i < 1000; i++) {
